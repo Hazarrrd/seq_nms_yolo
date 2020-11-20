@@ -44,7 +44,7 @@ Create virtual envirement, where code will be executed/
 
 First set variable PKG_CONFIG_PATH with commands:
 
-12. PKG_CONFIG_PATH=$PKG_CONFIG_PATH:./env/lib/pkgconfig
+12. PKG_CONFIG_PATH=$PKG_CONFIG_PATH:ENVNAME/lib/pkgconfig
 
 13. export PKG_CONFIG_PATH
 
