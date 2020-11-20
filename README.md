@@ -67,11 +67,16 @@ And afterwards do two changes in makefile:
 19. Upload the video.mp4, on which you want use detection algorithm, to folder video
 20. In files img2video.py, video2img.py, yolo_segnms.py, yolo_detection.py make all print functions to use parenthesis - print ('xx') instead print 'xx'
 21. Change files:
+
 ### in yolo_seqnms.py change:
 * add to imports import imageio
 * replace import cpickle as pickle with import pickle
 * in line 288 replace scipy.misc.imsave with imageio.imwrite
 * in line 39 replace the if condition box[0]==cls with str(box[0],'utf-8')== cls
+
+### in yolo_detection.py change:
+* to all patches in file add prefix B - "PATH" -> B"PATH"
+* in line 113 replace image with bytes(image, encoding='utf-8')
 
 ## Run the commands
 
